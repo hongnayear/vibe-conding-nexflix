@@ -168,9 +168,17 @@ nav a.active {
 }
 
 .movie-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.85rem;
-    color: #999;
-    margin-top: 5px;
+    color: #b3b3b3;
+    margin-top: 8px;
+    padding: 5px 0;
+}
+
+.date-label {
+    font-size: 1rem;
 }
 
 /* Footer */

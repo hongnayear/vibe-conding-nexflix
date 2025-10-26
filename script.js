@@ -79,7 +79,10 @@ function createMovieCard(movie) {
                 <span>⭐</span>
                 <span>${rating}</span>
             </div>
-            <div class="movie-date">${releaseDate}</div>
+            <div class="movie-date">
+                <span class="date-label">📅</span>
+                <span>${releaseDate}</span>
+            </div>
         </div>
     `;
 
