@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #141414;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e50914;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(20,20,20,0.8), rgba(20,20,20,1)),
+                url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1600') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Movies Section */
+.movies-section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #e5e5e5;
+    font-weight: 600;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 50px;
+    color: #e5e5e5;
+}
+
+.error {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 50px;
+    color: #e50914;
+}
+
+/* Movies Grid */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.movie-card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 15px;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #ffd700;
+}
+
+.movie-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        height: 300px;
+        margin-top: 120px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .movie-poster {
+        height: 225px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
